@@ -154,10 +154,24 @@
   background-color: #ffffff;
   display: block;
   border-radius: 5rem;
+  transition: .5s ease;
+}
+.header .toggle__menu.open span:first-child{
+  transform: rotate(45deg) translate(0,11px);
+  transition: 0.5s ease;
 }
 .header .toggle__menu span:nth-child(2) {
   margin: 0.5rem 0;
 }
+.header .toggle__menu.open span:last-child{
+  transform: rotate(-45deg) translate(0,-11px);
+  transition: 0.5s ease; 
+}
+.header .toggle__menu.open span:nth-child(2){
+  opacity: 0;
+  transition: .5s ease;
+}
+
 @media screen and (max-width: 500px){
   .header .header__nav{
     display: none;
