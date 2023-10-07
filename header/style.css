@@ -148,3 +148,23 @@
 .header .header__nav ul li a:hover{
   color: #1db954;
 }
+.header .header__wrapper .toggle__menu span{
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 5rem;
+}
+.header .toggle__menu span:nth-child(2) {
+  margin: 0.5rem 0;
+}
+@media screen and (max-width: 500px){
+  .header .header__nav{
+    display: none;
+  }
+  .header .header__wrapper .toggle__menu {
+    display: block;
+  }
+}
+
+ 
