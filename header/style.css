@@ -140,6 +140,7 @@
 }
 .header .header__wrapper .toggle__menu{
   display: none;
+  z-index: 999;
 }
 .header .header__nav ul li a{
   color: #ffffff;
@@ -173,8 +174,31 @@
 }
 
 @media screen and (max-width: 500px){
+ .header{
+  position: relative;
+  position: fixed;
+  width: 100%;
+ }
   .header .header__nav{
-    display: none;
+    position: absolute;
+    background: black;
+    top: 0;
+    height: 100vh;
+    right: -100rem;
+    width: 80%;
+    padding: 5rem 0rem 0rem 5rem;
+    transition: .5s ease;
+  }
+  .header .header__nav.open {
+    right: 0;
+  }
+  .header .header__nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .header__nav span {
+    transform: rotate(90deg);
   }
   .header .header__wrapper .toggle__menu {
     display: block;
